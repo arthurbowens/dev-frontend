@@ -1,0 +1,11 @@
+{
+  "name": "dev-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve src -p 4200"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

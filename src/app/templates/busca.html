@@ -1,0 +1,56 @@
+<div class="pagina-busca" ng-controller="BuscaController as vm">
+  <header class="cabecalho">
+    <div class="logo-marca" role="img" aria-label="MultiSearch">
+      <img
+        class="logo"
+        src="assets/logo_multisearch.png"
+        alt=""
+        width="64"
+        height="48"
+      />
+      <span class="logo-texto">MultiSearch</span>
+    </div>
+  </header>
+
+  <form class="campo-busca input-group" ng-submit="vm.buscar()">
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Digite sua busca"
+      ng-model="vm.textoBusca"
+      ng-disabled="vm.carregando"
+      aria-label="Texto da busca"
+    />
+    <button
+      type="submit"
+      class="btn btn-outline-secondary botao-buscar"
+      ng-disabled="vm.carregando"
+      aria-label="Buscar"
+    >
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+        ng-if="vm.carregando"
+      ></span>
+      <i class="bi bi-search" aria-hidden="true" ng-if="!vm.carregando"></i>
+    </button>
+  </form>
+
+  <p class="mensagem-erro" ng-if="vm.erro">{{ vm.erro }}</p>
+
+  <div ng-if="vm.buscou && !vm.carregando && vm.resultado">
+    <p class="resumo-resultados">
+      Foram encontrados {{ vm.resultado.total }} resultados:
+    </p>
+
+    <p class="mensagem-vazia" ng-if="vm.resultado.total === 0">
+      Nenhum resultado encontrado para "{{ vm.textoBusca }}".
+    </p>
+
+    <resultado-grupo
+      ng-repeat="grupo in vm.resultado.grupos track by grupo.categoria"
+      grupo="grupo"
+    ></resultado-grupo>
+  </div>
+</div>

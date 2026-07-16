@@ -1,0 +1,162 @@
+:root {
+  --cor-fundo: #eeeeee;
+  --cor-borda: #d0d0d0;
+  --cor-texto: #222222;
+  --cor-texto-suave: #999999;
+  --cor-destaque: #c0392b;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pagina-busca {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo-marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.logo {
+  display: block;
+  width: 56px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.logo-texto {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cor-texto);
+}
+
+.campo-busca {
+  margin-bottom: 1rem;
+}
+
+.campo-busca .form-control {
+  border-color: var(--cor-borda);
+  border-right: 0;
+  box-shadow: none;
+}
+
+.campo-busca .form-control:focus {
+  border-color: #adb5bd;
+  box-shadow: none;
+}
+
+.botao-buscar {
+  border-color: var(--cor-borda);
+  background: #fff;
+  min-width: 3rem;
+}
+
+.resumo-resultados {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.mensagem-vazia,
+.mensagem-erro {
+  color: var(--cor-texto-suave);
+  margin-bottom: 1rem;
+}
+
+.mensagem-erro {
+  color: var(--cor-destaque);
+}
+
+.grupo-resultado {
+  border: 1px solid var(--cor-borda);
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+.grupo-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.grupo-titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.grupo-contador {
+  color: var(--cor-texto-suave);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.lista-itens {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.item-resultado {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+}
+
+.item-id {
+  color: var(--cor-destaque);
+  font-weight: 600;
+  min-width: 4.5rem;
+}
+
+.item-descricao {
+  color: var(--cor-texto);
+}
+
+.item-quantidade {
+  color: var(--cor-texto);
+  white-space: nowrap;
+}
+
+.grupo-vazio {
+  margin: 0;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+@media (max-width: 575.98px) {
+  .item-resultado {
+    grid-template-columns: auto 1fr;
+  }
+
+  .item-quantidade {
+    grid-column: 2;
+  }
+}

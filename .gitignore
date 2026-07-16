@@ -1,0 +1,19 @@
+# Compiled output
+/dist
+/tmp
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/mcp.json
+.history/*
+
+# System files
+.DS_Store
+Thumbs.db

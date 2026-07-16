@@ -1,0 +1,16 @@
+<section class="grupo-resultado">
+  <header class="grupo-cabecalho">
+    <h2 class="grupo-titulo">{{ $ctrl.grupo.categoria }}</h2>
+    <span class="grupo-contador">{{ $ctrl.textoQuantidade($ctrl.grupo.itens.length) }}</span>
+  </header>
+
+  <p class="grupo-vazio" ng-if="$ctrl.grupo.itens.length === 0">nenhum item encontrado</p>
+
+  <ul class="lista-itens" ng-if="$ctrl.grupo.itens.length > 0">
+    <li class="item-resultado" ng-repeat="item in $ctrl.grupo.itens track by item.id">
+      <span class="item-id">#{{ item.id }}</span>
+      <span class="item-descricao">{{ item.descricao }}</span>
+      <span class="item-quantidade" ng-if="item.quantidade !== undefined">Qtd: {{ item.quantidade }} pç</span>
+    </li>
+  </ul>
+</section>
