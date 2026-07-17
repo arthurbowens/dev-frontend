@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  // true = sempre usa o Render, mesmo no localhost
-  // false = localhost usa API local; na nuvem usa o Render
   var forcarBackendNuvem = false;
 
   var hostLocal = window.location.hostname === 'localhost'
