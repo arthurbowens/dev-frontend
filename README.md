@@ -11,9 +11,10 @@ A tela envia o texto digitado para a API Spring Boot e exibe os resultados agrup
 - Bootstrap 5
 - JavaScript
 
-## Como rodar
+## Como rodar (local)
 
-1. Suba o backend em `http://localhost:8080`
+1. Suba o backend local em `http://localhost:8080`  
+   **ou** use o backend na nuvem (já configurado no Render)
 2. Neste projeto:
 
 ```bash
@@ -23,10 +24,19 @@ npm start
 
 3. Abra `http://localhost:4200`
 
-## Integração
+## API (automático)
 
-O frontend chama:
+Em `src/app/config/api.config.js`:
 
-`GET http://localhost:8080/api/busca?texto=...`
+- `localhost` → `http://localhost:8080/api/busca`
+- front na nuvem → `https://dev-backend-8klo.onrender.com/api/busca`
 
-Configuração em `src/app/config/api.config.js`.
+Para testar o **Render com o front local**, mude:
+
+```js
+var forcarBackendNuvem = true;
+```
+
+## Backend na nuvem
+
+`https://dev-backend-8klo.onrender.com`
