@@ -42,28 +42,12 @@ body {
   margin-bottom: 1.75rem;
 }
 
-.logo-marca {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-}
-
 .logo {
   display: block;
-  width: 72px;
-  max-width: 100%;
+  width: 180px;
+  max-width: 60vw;
   height: auto;
   mix-blend-mode: multiply;
-}
-
-.logo-texto {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--cor-texto);
-  text-align: center;
-  line-height: 1.1;
 }
 
 .campo-busca {
@@ -182,11 +166,7 @@ body {
   }
 
   .logo {
-    width: 64px;
-  }
-
-  .logo-texto {
-    font-size: 1.35rem;
+    width: 150px;
   }
 
   .grupo-cabecalho {
@@ -216,10 +196,6 @@ body {
   }
 
   .logo {
-    width: 80px;
-  }
-
-  .logo-texto {
-    font-size: 1.65rem;
+    width: 220px;
   }
 }
