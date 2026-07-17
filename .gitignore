@@ -1,19 +1,17 @@
-# Compiled output
-/dist
-/tmp
-
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
 
-# IDEs and editors
+# Build / temp
+/dist
+/tmp
+
+# IDEs
 .idea/
-.vscode/*
-!.vscode/tasks.json
-!.vscode/mcp.json
+.vscode/
 .history/*
 
-# System files
+# System
 .DS_Store
 Thumbs.db
