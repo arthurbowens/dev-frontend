@@ -40,3 +40,19 @@ var forcarBackendNuvem = true;
 ## Backend na nuvem
 
 `https://dev-backend-8klo.onrender.com`
+
+## Deploy no Vercel
+
+O projeto gera a pasta `dist/` a partir de `src/`.
+
+1. Conecte o repositório no Vercel
+2. Framework Preset: **Other**
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+5. Redeploy
+
+No Render (backend), adicione a URL do Vercel no CORS:
+
+```
+CORS_ORIGINS=http://localhost:4200,http://127.0.0.1:4200,https://SEU-PROJETO.vercel.app
+```
